@@ -3,6 +3,8 @@ package br.com.challenge.api.service;
 import java.util.List;
 import java.util.Optional;
 
+import com.querydsl.core.types.dsl.BooleanExpression;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -45,5 +47,9 @@ public class ProductService {
             return  this.productRepository.save(updated);
         }
         return null;
+    }
+
+    public Iterable<Product> search(BooleanExpression be){
+        return this.productRepository.findAll(be);
     }
 }
