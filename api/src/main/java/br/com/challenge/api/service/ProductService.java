@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import br.com.challenge.api.domain.Product;
@@ -17,6 +17,7 @@ public class ProductService {
     ProductRepository productRepository;
 
     public Product create(Product product){
+        product.setCreatedBy(SecurityContextHolder.getContext().getAuthentication().getName());
         return this.productRepository.save(product);
     }
 

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,8 +18,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-
 
 @RestController
 @RequestMapping("/api/product")
@@ -35,7 +34,7 @@ public class ProductResource {
         return ResponseEntity.ok(this.productService.create(product));
     }
 
-
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping
     public ResponseEntity<List<Product>> getAll() {
         return ResponseEntity.ok(this.productService.findAll());
@@ -45,17 +44,16 @@ public class ProductResource {
     public ResponseEntity<Product> findOne(@PathVariable Long id) {
         return ResponseEntity.ok(this.productService.findById(id));
     }
-    
+
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> delete(@PathVariable Long id){
+    public ResponseEntity<String> delete(@PathVariable Long id) {
         this.productService.delete(id);
         return ResponseEntity.ok("");
     }
 
     @PutMapping
-    public ResponseEntity<Product> update(@RequestBody Product product){
+    public ResponseEntity<Product> update(@RequestBody Product product) {
         return ResponseEntity.ok(this.productService.update(product));
     }
-
 
 }
