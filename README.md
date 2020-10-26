@@ -35,7 +35,7 @@ A aplicação define as APIs abaixo.
 
     GET /api/product
     POST /api/product
-    GET api/product/querydsl?search=propriedade:valor      Ex.: name:car
+    GET /api/product/querydsl?search=propriedade:valor      Ex.: name:car
     GET /api/product/{Id}   -- ADMIN --
     PUT /api/product/
     DELETE /api/product/{Id}
