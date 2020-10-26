@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "2099a1c9-0990-4e33-93e2-e856c5b5f891",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJzZWN1cmUtYXBpIiwiYXVkIjoic2VjdXJlLWFwcCIsInN1YiI6ImFkbWluIiwiZXhwIjoxNjA0NTQ0NDgwLCJyb2wiOlsiUk9MRV9VU0VSIl19.6e4dCPtNBKa_Oer65IGmv5xJgaYKSQhmc-cI3URjNQ2iBorH8MYIxKpXi5QDjYjMGj6o5wFIOEp1dmHz8qMr3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"prod4\",\n    \"description\" : \"description 01\",\n    \"tags\": \"sport,campus,games\",\n    \"image\":\"image 01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"admin\",\n    \"password\" : \"adminpw\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product :id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJzZWN1cmUtYXBpIiwiYXVkIjoic2VjdXJlLWFwcCIsInN1YiI6ImFkbWluIiwiZXhwIjoxNjA0NTM3MDY1LCJyb2wiOlsiUk9MRV9VU0VSIl19.169uaCEJlQBMD4rL0PHh8aC6hAxBrIyeUcZPE6HdFM_D9BIECv0FFRKgS7ycdiMoeeCPT86mz7sDClYhXpuDPg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"product 1\",\n    \"description\" : \"description 01\",\n    \"tags\": \"sport,campus,games\",\n    \"image\":\"image 01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJzZWN1cmUtYXBpIiwiYXVkIjoic2VjdXJlLWFwcCIsInN1YiI6ImFkbWluIiwiZXhwIjoxNjA0NTQ0NDgwLCJyb2wiOlsiUk9MRV9VU0VSIl19.6e4dCPtNBKa_Oer65IGmv5xJgaYKSQhmc-cI3URjNQ2iBorH8MYIxKpXi5QDjYjMGj6o5wFIOEp1dmHz8qMr3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"product 1\",\n    \"description\" : \"description 01\",\n    \"tags\": \"sport,campus,games\",\n    \"image\":\"image 01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJzZWN1cmUtYXBpIiwiYXVkIjoic2VjdXJlLWFwcCIsInN1YiI6ImFkbWluIiwiZXhwIjoxNjA0NTM3NzU0LCJyb2wiOlsiUk9MRV9VU0VSIl19.3tmnaXwJtHu3jjzbmjBybNt44YydTOE71dg92slqt1z3ZoFeJTV-syy6ETieOohOCvbwilzET_yRI17kbPbbyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"product 2\",\n    \"description\": \"description 01\",\n    \"tags\": \"sport,campus,gamsasaes\",\n    \"image\": \"image 01\",\n    \"creation\": \"2020-10-25T19:29:06.35751\",\n    \"createdBy\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"product 1\",\n    \"description\" : \"description 01\",\n    \"tags\": \"sport,campus,games\",\n    \"image\":\"image 01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search querydsl",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJzZWN1cmUtYXBpIiwiYXVkIjoic2VjdXJlLWFwcCIsInN1YiI6ImFkbWluIiwiZXhwIjoxNjA0NTQ0NDgwLCJyb2wiOlsiUk9MRV9VU0VSIl19.6e4dCPtNBKa_Oer65IGmv5xJgaYKSQhmc-cI3URjNQ2iBorH8MYIxKpXi5QDjYjMGj6o5wFIOEp1dmHz8qMr3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/product/querydsl?search=name:prod4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"querydsl"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "name:prod4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
